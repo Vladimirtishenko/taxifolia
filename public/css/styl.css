@@ -222,3 +222,19 @@ span {
   text-transform: uppercase;
   font-size: 14px;
 }
+.taxifolia-top-slider {
+  width: 100%;
+}
+
+.taxifolia-slide-item {
+  width: 1024px;
+}
+
+.taxifolia-slide-item-background {
+  width: 100%;
+  position: relative;
+}
+
+.-one-slide {
+  background: #fff;
+}

@@ -18,7 +18,7 @@ function SiteModel() {
     };
 }
 
-SiteModel.prototype.Xhr = function() {
+SiteModel.prototype.Xhr = function(method, url, data) {
     "use strict";
 
     var xhr = new XMLHttpRequest();
@@ -30,6 +30,6 @@ SiteModel.prototype.Xhr = function() {
     };
 
     xhr.open(method, url, true);
-    xhr.send(formData);
+    xhr.send();
 
 };
