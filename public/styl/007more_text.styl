@@ -1,0 +1,69 @@
+@import '001func.styl'
+
+.taxifolia-more-text-description
+	width 100%
+	background linear-gradient(to right, #119d6c 0%,#119d6c 53%,#1db65b 55%,#1db65b 100%)
+	
+.taxifolia-more-text-description-list
+	margin 30px auto
+	width staticWidth
+	position relative
+	display flex
+
+  
+.taxifolia-more-text-description-list-item
+	transition flex 500ms ease-out
+	position relative
+	&:nth-child(1)
+		padding 70px 10px 70px 90px
+		background #119d6c
+		flex 2
+		&:before
+			width 60px
+			height 71px
+			content ""
+			position absolute
+			background url(../images/sprite.png) -19px -429px
+			left 20px
+	&:nth-child(2)
+		padding 70px 10px 70px 90px
+		background #13a564
+		flex 2
+		&:before
+			width 60px
+			height 71px
+			content ""
+			position absolute
+			background url(../images/sprite.png) -90px -429px
+			left 20px
+	&:nth-child(3) 
+		padding 70px 10px 70px 110px
+		background #1db65b
+		flex 3
+		&:before
+			width 90px
+			height 76px
+			content ""
+			position absolute
+			background url(../images/sprite.png) -154px -422px
+			left 20px
+	&:hover
+		flex 3
+
+.taxifolia-more-text-description-outer
+	width 100%
+	position relative
+	overflow hidden
+
+.taxifolia-more-text-description-list-item h4
+	font-size 25px
+	color #fff
+	text-transform uppercase
+	margin 20px 0
+	font-family "PFsemi"
+
+.taxifolia-more-text-description-list-item p 
+	width 300px
+	color #fff
+	line-height 20px
+	padding-right 50px

@@ -35,7 +35,7 @@ gulp.task('js', function() {
             },
             rules: {
                 'strict': 2,
-                'no-console': 2,
+                //'no-console': 2,
                 'no-alert': 2,
                 'no-dupe-keys': 2,
                 'no-duplicate-case' : 2,

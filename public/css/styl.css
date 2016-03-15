@@ -1,8 +1,21 @@
 
 @font-face {
-  font-family: "HelveticaBold";
-  src: url("../fonts/HelveticaBold/HelveticaBold.eot");
-  src: url("../fonts/HelveticaBold/HelveticaBold.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaBold/HelveticaBold.woff") format("woff"), url("../fonts/HelveticaBold/HelveticaBold.ttf") format("truetype");
+  font-family: "PFsemi";
+  src: url("../font/pfbeausanspro-sebold.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PFbold";
+  src: url("../font/pfbeausanspro-bold.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PFreg";
+  src: url("../font/pfbeausanspro-reg.ttf");
   font-style: normal;
   font-weight: normal;
 }
@@ -194,6 +207,22 @@ span {
 .-green {
   background: #2eae5b;
 }
+
+.-max {
+  padding: 14px 0 15px !important;
+  width: 175px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.taxifolia-title {
+  font-size: 30px;
+  padding: 75px 0 20px;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "PFsemi";
+}
 .taxifolia-inner-main-header {
   width: 100%;
   background: #fff;
@@ -214,7 +243,7 @@ span {
 }
 
 .taxifolia-item-menu:first-child {
-  margin-left: 60px;
+  margin-left: 30px;
 }
 
 .taxifolia-item-menu a {
@@ -224,10 +253,16 @@ span {
 }
 .taxifolia-top-slider {
   width: 100%;
+  height: 585px;
+  overflow: hidden;
 }
 
 .taxifolia-slide-item {
   width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .taxifolia-slide-item-background {
@@ -236,5 +271,244 @@ span {
 }
 
 .-one-slide {
-  background: #fff;
+  background-image: url("../images/sld.jpg");
+  background-position: 50% 50%;
+}
+
+.taxifolia-slid-image-left-part img {
+  margin-top: 200px;
+}
+
+.taxifolia-slide-list {
+  padding-left: 15px;
+  margin: 35px 0 45px;
+}
+
+.taxifolia-slide-list-item {
+  color: #2eae5b;
+  padding: 5px 0;
+  position: relative;
+}
+
+.taxifolia-slide-list-item:before {
+  left: -16px;
+  top: 9px;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 2px solid #fbc800;
+  content: "";
+}
+
+.taxifolia-slide-title {
+  text-transform: uppercase;
+  margin: 45px 0 0 0;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+.taxifolia-slide-title span {
+  display: block;
+  font-size: 25px;
+}
+.taxifolia-main-props {
+  width: 100%;
+  background-image: url("../images/sld_2.jpg");
+  background-position: 50% 0%;
+  padding-bottom: 50px;
+}
+
+.taxifolia-main-props-responsive {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.taxifolia-main-props-list {
+  padding: 0px;
+}
+
+.taxifolia-main-props-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.taxifolia-main-props-list-item-image-path {
+  width: 117px;
+  height: 132px;
+  margin-right: 20px;
+}
+
+.taxifolia-main-props-list-item-description-path {
+  width: 90%;
+}
+
+.taxifolia-main-props-list-item-description-path span {
+  color: #808080;
+}
+
+.taxifolia-main-props-list-item-description-path h4 {
+  font-family: "PFreg";
+  font-size: 18px;
+  padding: 10px 0 20px;
+  margin: 0;
+}
+
+.taxifolia-main-props-list-item-description-path p {
+  margin: 0;
+}
+
+.--heart {
+  background: url("../images/sprite.png") 0px 0px;
+}
+
+.--veins {
+  background: url("../images/sprite.png") -115px 0px;
+}
+
+.--brain {
+  background: url("../images/sprite.png") -230px 0px;
+}
+
+.--lungs {
+  background: url("../images/sprite.png") -345px 0px;
+}
+
+.--immunity {
+  background: url("../images/sprite.png") -460px 0px;
+}
+.taxifolia-way-of-activities {
+  width: 100%;
+}
+
+.taxifolia-way-of-activities-responsive {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.taxifolia-way-of-activities-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+.taxifolia-way-of-activities-list-item {
+  text-align: center;
+  width: 33%;
+}
+
+.taxifolia-way-of-activities-image {
+  width: 230px;
+  height: 260px;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.taxifolia-way-of-activities-list-item h4 {
+  font-family: "PFreg";
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.--antioksidant {
+  background: url("../images/sprite.png") -3px -154px;
+}
+
+.--capillaries {
+  background: url("../images/sprite.png") -236px -154px;
+}
+
+.--immunity-active {
+  background: url("../images/sprite.png") -468px -154px;
+}
+.taxifolia-more-text-description {
+  width: 100%;
+  background: linear-gradient(to right, #119d6c 0%, #119d6c 53%, #1db65b 55%, #1db65b 100%);
+}
+
+.taxifolia-more-text-description-list {
+  margin: 30px auto;
+  width: 1024px;
+  position: relative;
+  display: flex;
+}
+
+.taxifolia-more-text-description-list-item {
+  transition: flex 500ms ease-out;
+  position: relative;
+}
+
+.taxifolia-more-text-description-list-item:nth-child(1) {
+  padding: 70px 10px 70px 90px;
+  background: #119d6c;
+  flex: 2;
+}
+
+.taxifolia-more-text-description-list-item:nth-child(1):before {
+  width: 60px;
+  height: 71px;
+  content: "";
+  position: absolute;
+  background: url("../images/sprite.png") -19px -429px;
+  left: 20px;
+}
+
+.taxifolia-more-text-description-list-item:nth-child(2) {
+  padding: 70px 10px 70px 90px;
+  background: #13a564;
+  flex: 2;
+}
+
+.taxifolia-more-text-description-list-item:nth-child(2):before {
+  width: 60px;
+  height: 71px;
+  content: "";
+  position: absolute;
+  background: url("../images/sprite.png") -90px -429px;
+  left: 20px;
+}
+
+.taxifolia-more-text-description-list-item:nth-child(3) {
+  padding: 70px 10px 70px 110px;
+  background: #1db65b;
+  flex: 3;
+}
+
+.taxifolia-more-text-description-list-item:nth-child(3):before {
+  width: 90px;
+  height: 76px;
+  content: "";
+  position: absolute;
+  background: url("../images/sprite.png") -154px -422px;
+  left: 20px;
+}
+
+.taxifolia-more-text-description-list-item:hover {
+  flex: 3;
+}
+
+.taxifolia-more-text-description-outer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.taxifolia-more-text-description-list-item h4 {
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-family: "PFsemi";
+}
+
+.taxifolia-more-text-description-list-item p {
+  width: 300px;
+  color: #fff;
+  line-height: 20px;
+  padding-right: 50px;
 }
