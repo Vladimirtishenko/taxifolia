@@ -20,6 +20,13 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "PBook";
+  src: url("../font/pfbeausanspro-book.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -188,6 +195,13 @@ span {
   font-size: 12px;
 }
 
+input {
+  height: 35px;
+  background: #dfe7c6;
+  border: none;
+  padding: 0 10px;
+}
+
 /* Defaults */
 
 .taxifolia-main-outer {
@@ -213,6 +227,16 @@ span {
   width: 175px;
   font-size: 16px;
   font-weight: 700;
+}
+
+.-white {
+  background: #fff;
+  color: #000;
+  font-family: "PBook";
+  font-size: 25px;
+  padding: 17px 0 14px !important;
+  width: 220px;
+  margin: auto;
 }
 
 .taxifolia-title {
@@ -253,7 +277,7 @@ span {
 }
 .taxifolia-top-slider {
   width: 100%;
-  height: 585px;
+  height: 545px;
   overflow: hidden;
 }
 
@@ -268,6 +292,7 @@ span {
 .taxifolia-slide-item-background {
   width: 100%;
   position: relative;
+  height: 545px;
 }
 
 .-one-slide {
@@ -275,8 +300,8 @@ span {
   background-position: 50% 50%;
 }
 
-.taxifolia-slid-image-left-part img {
-  margin-top: 200px;
+.taxifolia-slid-image-left-part {
+  padding-top: 75px;
 }
 
 .taxifolia-slide-list {
@@ -285,7 +310,7 @@ span {
 }
 
 .taxifolia-slide-list-item {
-  color: #2eae5b;
+  color: #81ab1c;
   padding: 5px 0;
   position: relative;
 }
@@ -303,9 +328,10 @@ span {
 
 .taxifolia-slide-title {
   text-transform: uppercase;
-  margin: 45px 0 0 0;
+  margin: 25px 0 0 0;
   line-height: 50px;
   font-size: 50px;
+  font-family: "PFsemi";
 }
 
 .taxifolia-slide-title span {
@@ -392,9 +418,8 @@ span {
 .taxifolia-way-of-activities-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
-  padding: 0;
+  padding: 0 0 60px 0;
 }
 
 .taxifolia-way-of-activities-list-item {
@@ -412,7 +437,16 @@ span {
 .taxifolia-way-of-activities-list-item h4 {
   font-family: "PFreg";
   margin: 20px 0;
+  line-height: 25px;
   text-transform: uppercase;
+}
+
+.taxifolia-way-of-activities-list-item p {
+  font-size: 13px;
+  color: #434240;
+  line-height: 18px;
+  text-align: left;
+  padding: 0 30px;
 }
 
 .--antioksidant {
@@ -428,7 +462,7 @@ span {
 }
 .taxifolia-more-text-description {
   width: 100%;
-  background: linear-gradient(to right, #119d6c 0%, #119d6c 53%, #1db65b 55%, #1db65b 100%);
+  background: linear-gradient(to right, #f66920 0%, #f66920 53%, #fca32a 55%, #fca32a 100%);
 }
 
 .taxifolia-more-text-description-list {
@@ -441,12 +475,13 @@ span {
 .taxifolia-more-text-description-list-item {
   transition: flex 500ms ease-out;
   position: relative;
+  overflow: hidden;
 }
 
 .taxifolia-more-text-description-list-item:nth-child(1) {
   padding: 70px 10px 70px 90px;
-  background: #119d6c;
-  flex: 2;
+  background: #f66920;
+  flex: 1;
 }
 
 .taxifolia-more-text-description-list-item:nth-child(1):before {
@@ -458,10 +493,21 @@ span {
   left: 20px;
 }
 
+.taxifolia-more-text-description-list-item:nth-child(1):after {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fd9427 100%);
+  z-index: 100;
+  content: "";
+  top: 0;
+}
+
 .taxifolia-more-text-description-list-item:nth-child(2) {
   padding: 70px 10px 70px 90px;
-  background: #13a564;
-  flex: 2;
+  background: #fd9427;
+  flex: 1;
 }
 
 .taxifolia-more-text-description-list-item:nth-child(2):before {
@@ -473,10 +519,21 @@ span {
   left: 20px;
 }
 
+.taxifolia-more-text-description-list-item:nth-child(2):after {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fca32a 100%);
+  z-index: 100;
+  content: "";
+  top: 0;
+}
+
 .taxifolia-more-text-description-list-item:nth-child(3) {
   padding: 70px 10px 70px 110px;
-  background: #1db65b;
-  flex: 3;
+  background: #fca32a;
+  flex: 1;
 }
 
 .taxifolia-more-text-description-list-item:nth-child(3):before {
@@ -486,6 +543,17 @@ span {
   position: absolute;
   background: url("../images/sprite.png") -154px -422px;
   left: 20px;
+}
+
+.taxifolia-more-text-description-list-item:nth-child(3):after {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fca32a 100%);
+  z-index: 100;
+  content: "";
+  top: 0;
 }
 
 .taxifolia-more-text-description-list-item:hover {
@@ -504,11 +572,114 @@ span {
   text-transform: uppercase;
   margin: 20px 0;
   font-family: "PFsemi";
+  width: 400px;
 }
 
 .taxifolia-more-text-description-list-item p {
-  width: 300px;
+  width: 400px;
   color: #fff;
   line-height: 20px;
   padding-right: 50px;
+}
+.taxifolia-backets {
+  width: 100%;
+  background: linear-gradient(to bottom, #fcf7e5 0%, #fff 100%);
+}
+
+.taxifolia-backets-responsive {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.taxifolia-backets-responsive-background {
+  width: 1260px;
+  position: absolute;
+  height: 100%;
+  background: url("../images/figure.png");
+  left: calc((1024px - 1260px) / 2);
+  z-index: 0;
+}
+
+.taxifolia-backets-mails {
+  height: 650px;
+  position: relative;
+}
+
+.taxifolia-backets-mails-form {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.taxifolia-title-form {
+  font-size: 35px;
+  font-family: "PFsemi";
+  color: #fff;
+  padding: 140px 0 55px 0;
+  text-transform: uppercase;
+}
+
+.taxifolia-description-form {
+  color: #fff;
+  font-size: 16px;
+}
+
+.taxifolia-binding-input {
+  width: 230px;
+  margin: 20px auto 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taxifolia-binding-input span {
+  font-size: 16px;
+  color: #fff;
+}
+
+.taxifolia-binding-input input {
+  width: 195px;
+}
+
+.taxifolia-mail-form h3 {
+  position: relative;
+  padding: 0 0 30px 0;
+}
+
+.taxifolia-mail-form h3:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  background: #fff;
+  left: 0;
+  z-index: -1;
+  top: 6px;
+}
+
+.taxifolia-mail-form span {
+  font-size: 17px;
+  font-family: "PFsemi";
+  color: #fff;
+  position: relative;
+  background: #81ab1c;
+  padding: 0 20px;
+  z-index: 9;
+  text-transform: uppercase;
+}
+
+.taxifolia-mail-form-flex-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.taxifolia-mail-form-flex-item-3 {
+  width: 32%;
+}
+
+.taxifolia-mail-form-flex-item-1 {
+  width: 100%;
+  margin: 15px 0 50px 0;
 }
