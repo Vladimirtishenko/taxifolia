@@ -5,8 +5,9 @@ function TopSlider(element){
 		return false;
 	}
 
-	this.element = element;
-	this.children = element.children;
+	this.width = element.clientHeight;
+	this.element = element.firstElementChild;
+	this.children = this.element.children;
 	this.count = this.children.length;
 	this.current = 0;
 
@@ -32,7 +33,7 @@ TopSlider.prototype.constructControls = function(){
 	str += "</div>";
 
 	try {
-		self.element.insertAdjacentHTML('beforeend', str);
+		self.element.parentNode.insertAdjacentHTML('beforeend', str);
 		return true;
 	} catch (e){
 		throw Error("No Slides");
@@ -48,5 +49,17 @@ TopSlider.prototype.addEventListeners = function(){
 
 TopSlider.prototype.handlerToListeners = function(){
 	"use strict";
+	var target = event.target,
+		attr = (typeof target.getAttribute('data-number') == 'string') ? parseInt(target.getAttribute('data-number')) : null,
+		curentSlide = this.element.parentNode.querySelector('.-active');
+
+	if(attr == null || target.classList.contains('-active')){
+		return;
+	}
+
+	this.element.style.cssText = "transform: translateY("+this.width*(-attr)+"px)";
+	this.current = attr;
+	curentSlide.classList.remove('-active');
+	target.classList.add('-active');
 
 };

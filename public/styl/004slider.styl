@@ -4,6 +4,7 @@
 	width 100%
 	height 545px 
 	overflow hidden
+	position relative
 
 .taxifolia-slide-item
 	width staticWidth
@@ -22,10 +23,10 @@
 	background-position 50% 50%
 
 .taxifolia-slid-image-left-part
-	padding-top 75px
+	padding-top 130px
 
 .taxifolia-slide-list
-	padding-left 15px
+	padding-left 20px
 	margin 35px 0 45px
 
 .taxifolia-slide-list-item
@@ -39,7 +40,7 @@
 		width 4px 
 		height 4px
 		border-radius 50%
-		border 2px solid yellowColor
+		border 2px solid greenColor
 		content ""
 	
 .taxifolia-slide-title
@@ -52,3 +53,26 @@
 .taxifolia-slide-title span 
 	display block
 	font-size 25px
+
+.taxifolia-top-slider-controls
+	position absolute
+	right 20px
+	top 50%
+	margin-top -40px
+
+.taxifolia-top-slider-controls-item 
+	width 8px 
+	height 8px
+	display block
+	margin 10px 0
+	background transparent
+	border 2px solid #000
+	border-radius 50%
+	cursor pointer
+
+.taxifolia-top-slider-controls-item.-active
+	background #000
+
+.taxifolia-top-slider-move
+	position relative
+	transition .5s

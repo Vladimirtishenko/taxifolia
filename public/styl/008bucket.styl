@@ -8,6 +8,9 @@
 	width staticWidth
 	margin 0 auto
 	position relative
+	background-image url(../images/back_mail.png)
+	background-position 50% 0
+	background-repeat no-repeat
 
 .taxifolia-backets-responsive-background
 	width 1260px
@@ -20,7 +23,38 @@
 .taxifolia-backets-mails
 	height 650px
 	position relative
-	
+
+.taxifolia-backets-goods
+	display flex 	
+	justify-content space-around
+	margin-top 50px
+
+.taxifolia-backets-goods-item
+	text-align center
+
+.taxifolia-backets-goods-item h3
+	font-family "PFsemi"
+	text-transform uppercase
+	line-height 20px
+	padding 10px 0
+
+.taxifolia-backets-goods-item p 
+	line-height 17px
+	font-size 13px
+
+.taxifolia-hidden-input
+	display none
+
+.taxifolia-backets-goods-item label
+	width 28px 
+	height 28px
+	display inline-block
+	margin-top 15px
+	background url(../images/sprite.png) -304px -468px
+
+.taxifolia-backets-goods-item input:checked + label
+	background url(../images/sprite.png) -259px -468px
+
 
 .taxifolia-backets-mails-form
 	text-align center
