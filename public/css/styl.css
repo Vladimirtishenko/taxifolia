@@ -499,7 +499,7 @@ input {
 }
 
 .taxifolia-more-text-description-list {
-  margin: 30px auto;
+  margin: 30px auto 0;
   width: 1024px;
   position: relative;
   display: flex;
@@ -665,7 +665,9 @@ input {
 }
 
 .taxifolia-hidden-input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  z-index: -999px;
 }
 
 .taxifolia-backets-goods-item label {
@@ -769,21 +771,22 @@ input {
 .taxifolia-comments-part-sliders-outer {
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 .taxifolia-comments-part-sliders-outer-hidden {
-  width: 95%;
+  width: 1000px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .taxifolia-slider-comments-list {
   display: table;
-  transition: 0.5s;
 }
 
 .taxifolia-slider-comments-list-item {
   float: left;
+  width: 1000px;
 }
 
 .taxifolia-slider-comments-list-item__flex {
@@ -861,4 +864,36 @@ input {
   color: #81ab1c;
   font-family: "PFsemi";
   font-size: 35px;
+}
+
+.taxifolia-slider-comments-controls {
+  position: absolute;
+  width: 100%;
+}
+
+.taxifolia-arrow-prev {
+  position: absolute;
+  width: 11px;
+  height: 22px;
+  display: inline-block;
+  background: url("../images/sprite.png") -262px -434px;
+  top: -75px;
+  left: -25px;
+  cursor: pointer;
+}
+
+.taxifolia-arrow-next {
+  position: absolute;
+  width: 11px;
+  height: 22px;
+  display: inline-block;
+  background: url("../images/sprite.png") -309px -434px;
+  top: -75px;
+  right: -25px;
+  cursor: pointer;
+}
+.taxifolia-sertificates {
+  width: 100%;
+  background: #ececec;
+  height: 400px;
 }

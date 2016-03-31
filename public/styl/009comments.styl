@@ -10,19 +10,20 @@
 .taxifolia-comments-part-sliders-outer
 	width 100%
 	margin 0 auto 
+	position relative
 
 .taxifolia-comments-part-sliders-outer-hidden
-	width 95%
+	width 1000px
 	margin 0 auto
 	overflow hidden
 
 .taxifolia-slider-comments-list
 	display table
-	transition .5s
 
 .taxifolia-slider-comments-list-item
 	float left
-
+	width 1000px
+	
 .taxifolia-slider-comments-list-item__flex
 	display flex
 	justify-content flex-start
@@ -84,4 +85,28 @@
 	color greenColor
 	font-family "PFsemi"
 	font-size 35px
+
+.taxifolia-slider-comments-controls
+	position absolute
+	width 100%
+
+.taxifolia-arrow-prev
+	position absolute
+	width 11px
+	height 22px
+	display inline-block
+	background url(../images/sprite.png) -262px -434px
+	top -75px
+	left -25px
+	cursor pointer
 	
+
+.taxifolia-arrow-next
+	position absolute
+	width 11px
+	height 22px
+	display inline-block
+	background url(../images/sprite.png) -309px -434px
+	top -75px
+	right -25px
+	cursor pointer

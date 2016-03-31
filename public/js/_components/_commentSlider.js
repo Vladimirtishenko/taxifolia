@@ -28,11 +28,7 @@ CommentSlider.prototype.addEventListeners = function(){
 
 CommentSlider.prototype.addStyleWidth = function(){
 	"use strict";
-	this.element.style.cssText += "width: "+ this.width * this.count + "px";
-
-	[].forEach.call(this.children, function(item){
-		item.style.cssText += "width: "+ this.width + "px";
-	}.bind(this));
+	this.element.style.cssText += "width: "+ this.width * (this.count + 1) + "px";
 };
 
 CommentSlider.prototype.handlerToListeners = function(){
@@ -54,8 +50,11 @@ CommentSlider.prototype.handlerToListeners = function(){
 	if(attr == 'prev'){
 		self.element.insertBefore(self.element.lastElementChild, self.element.firstElementChild);
 		self.element.style.cssText += "transform: translateX("+(-self.width)+"px)";
-		//self.element.style.cssText += "transform: translateX(0px)";
-		//self.animation(null);
+		setTimeout(function(){
+			self.element.style.cssText += "transition: .5s; transform: translateX(0px)";
+			self.animation(null);
+		}, 20);
+		
 
 	} else{
 		self.element.style.cssText += "transition: .5s; transform: translateX("+(-self.width)+"px)";
