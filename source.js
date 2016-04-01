@@ -4,6 +4,7 @@ function returnSource(){
         './public/js/controller.js', 
         './public/js/_components/_topSlider.js',
         './public/js/_components/_commentSlider.js',
+        './public/js/lib/jquery.waterwheelCarousel.js'
     ];
 	return files;
 }

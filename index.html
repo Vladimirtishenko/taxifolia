@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="manifest.cache">
 <head>
 	<meta charset="UTF-8">
 	<title>Taxifolia</title>
@@ -179,30 +179,15 @@
 					Сертификаты
 				</h2>
 				<div class="taxifolia-sertificates-sliders-outer">
-					<ul class="taxifolia-sertificates-list">
-						<li class="taxifolia-sertificates-list-title">
-							<img src="" alt="">
-						</li>
-						<li class="taxifolia-sertificates-list-title">
-							<img src="" alt="">
-						</li>
-						<li class="taxifolia-sertificates-list-title">
-							<img src="" alt="">
-						</li>
-						<li class="taxifolia-sertificates-list-title">
-							<img src="" alt="">
-						</li>
-						<li class="taxifolia-sertificates-list-title">
-							<img src="" alt="">
-						</li>
-						<li class="taxifolia-sertificates-list-title">
-							<img src="" alt="">
-						</li>
-					</ul>
-					<div class="taxifolia-sertificates-sliders-control">
-						<span></span>
-						<span></span>
-					</div>
+					<div id="taxifolia-carousel">
+				      <a href="#"><img src="./public/images/serteficates/1.jpg" class="taxifolia-sertificates-image" id="item-1" /></a>
+				      <a href="#"><img src="./public/images/serteficates/2.jpg" class="taxifolia-sertificates-image" id="item-2" /></a>
+				      <a href="#"><img src="./public/images/serteficates/3.jpg" class="taxifolia-sertificates-image" id="item-3" /></a>
+				      <a href="#"><img src="./public/images/serteficates/4.jpg" class="taxifolia-sertificates-image" id="item-4" /></a>
+				      <a href="#"><img src="./public/images/serteficates/5.jpg" class="taxifolia-sertificates-image" id="item-5" /></a>
+				      <a href="#"><img src="./public/images/serteficates/6.jpg" class="taxifolia-sertificates-image" id="item-6" /></a>
+				    </div>
+				    <a href="#" id="taxifolia-carousel-prev">Prev</a> | <a href="#" id="taxifolia-carousel-next">Next</a>
 				</div>
 			</div>
 		</div>
@@ -333,6 +318,10 @@
 			</form>
 		</div>
 	</section>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="public/build/build.min.js"></script>
+	<script>
+		var carousel = $("#taxifolia-carousel").waterwheelCarousel();
+	</script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+CACHE MANIFEST
+# v1
+
+CACHE:
+public/images/sprite.png
+public/images/figure.png
+public/images/slideOne.png
+public/images/serteficates/*
+public/font/pfbeausanspro-sebold.ttf
+public/font/pfbeausanspro-bold.ttf
+public/font/pfbeausanspro-reg.ttf
+public/font/pfbeausanspro-book.ttf
+public/build/build.min.js
+public/build/build.min.css
+index.html
+http://code.jquery.com/jquery-1.9.1.min.js
+
+NETWORK:
+
+
+FALLBACK:

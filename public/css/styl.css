@@ -616,6 +616,7 @@ input {
 }
 .taxifolia-backets {
   width: 100%;
+  overflow-x: hidden;
   background: linear-gradient(to bottom, #fcf7e5 0%, #fff 100%);
 }
 
@@ -895,5 +896,15 @@ input {
 .taxifolia-sertificates {
   width: 100%;
   background: #ececec;
-  height: 400px;
+  height: 330px;
+  margin-bottom: 80px;
+}
+
+.taxifolia-sertificates-sliders-outer {
+  position: relative;
+  top: -105px;
+}
+
+.taxifolia-sertificates-image {
+  box-shadow: 0 0 20px 3px rgba(0,0,0,0.3);
 }
