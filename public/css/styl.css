@@ -207,6 +207,7 @@ input {
 .taxifolia-main-outer {
   width: 100%;
   position: relative;
+  background: #fff;
 }
 
 .taxifolia-button {
@@ -216,6 +217,9 @@ input {
   padding: 10px 0 11px !important;
   border-radius: 30px;
   cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 13px;
 }
 
 .-green {
@@ -252,6 +256,18 @@ input {
   text-align: center;
   font-family: "PFsemi";
 }
+
+@media screen and (max-width: 500px) {
+  .taxifolia-title {
+    font-size: 25px;
+    padding: 35px 0 10px;
+  }
+
+  .-mini {
+    font-size: 18px !important;
+    padding: 10px 20px !important;
+  }
+}
 .taxifolia-inner-main-header {
   width: 100%;
   background: #fff;
@@ -268,17 +284,93 @@ input {
 
 .taxifolia-item-menu {
   display: inline-block;
-  margin: 0 13px;
+  margin: 0 10px;
 }
 
 .taxifolia-item-menu:first-child {
   margin-left: 30px;
 }
 
-.taxifolia-item-menu a {
+.taxifolia-item-menu a:not(.taxifolia-button) {
   color: #000;
   text-transform: uppercase;
   font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+  .taxifolia-inner-main-header {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .taxifolia-fixed-mobile {
+    position: relative;
+  }
+
+  .taxifolia-item-menu {
+    margin: 0 !important;
+  }
+
+  .taxifolia-item-menu a {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .taxifolia-item-menu a {
+    font-size: 12px !important;
+  }
+
+  .taxifolia-item-menu:nth-child(4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .taxifolia-item-menu {
+    width: 100%;
+  }
+
+  .taxifolia-item-menu a {
+    font-size: 13px !important;
+    line-height: 16px;
+  }
+
+  .taxifolia-list-menu {
+    text-align: center;
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .taxifolia-list-menu {
+    text-align: center;
+    width: 50%;
+  }
+
+  .taxifolia-logo img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .taxifolia-logo img {
+    width: initial;
+  }
+
+  .taxifolia-list-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .taxifolia-inner-main-header .taxifolia-button {
+    display: none;
+  }
+
+  .taxifolia-inner-main-header {
+    justify-content: center;
+  }
 }
 .taxifolia-top-slider {
   width: 100%;
@@ -371,6 +463,104 @@ input {
   position: relative;
   transition: 0.5s;
 }
+
+@media screen and (max-width: 1024px) {
+  .taxifolia-slide-item {
+    width: 100%;
+    justify-content: space-around;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .taxifolia-slid-image-left-part {
+    text-align: center;
+  }
+
+  .taxifolia-slid-image-left-part img {
+    width: 400px;
+  }
+
+  .taxifolia-slide-title {
+    margin: 15px 0 0 0;
+    line-height: 30px;
+    font-size: 30px;
+  }
+
+  .taxifolia-slide-title span {
+    font-size: 15px;
+  }
+
+  .taxifolia-slid-image-left-part {
+    padding-top: 50px;
+  }
+
+  .taxifolia-slide-list {
+    margin: 15px 0 25px;
+  }
+
+  .taxifolia-slide-item-background,
+  .taxifolia-top-slider {
+    height: 445px;
+  }
+
+  .taxifolia-slide-min-description {
+    padding: 0 50px 0 0;
+    display: inline-block;
+  }
+
+  .-one-slide {
+    background-position: 50% 25%;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .taxifolia-slide-item-background,
+  .taxifolia-top-slider {
+    height: 590px;
+  }
+
+  .taxifolia-slide-item {
+    flex-wrap: wrap;
+    padding: 100px 0 0 0;
+  }
+
+  .taxifolia-slide-list {
+    display: none;
+  }
+
+  .taxifolia-slide-description-part {
+    text-align: center;
+    margin-top: -60px;
+  }
+
+  .taxifolia-slide-min-description {
+    padding: 0px;
+  }
+
+  .taxifolia-slide-title {
+    margin: 15px 0 15px;
+  }
+
+  .-one-slide {
+    background-position: 40% 50%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .taxifolia-slid-image-left-part img {
+    width: 290px;
+  }
+
+  .taxifolia-slid-image-left-part {
+    padding-top: 0;
+  }
+
+  .taxifolia-slide-description-part {
+    padding: 0 20px;
+    margin-top: -100px;
+  }
+}
 .taxifolia-main-props {
   width: 100%;
   background-image: url("../images/sld_2.jpg");
@@ -399,10 +589,12 @@ input {
   width: 117px;
   height: 132px;
   margin-right: 20px;
+  background: url("../images/sprite.png") 0px 0px;
+  position: relative;
 }
 
 .taxifolia-main-props-list-item-description-path {
-  width: 90%;
+  width: calc(100% - 140px);
 }
 
 .taxifolia-main-props-list-item-description-path span {
@@ -420,27 +612,88 @@ input {
   margin: 0;
 }
 
-.--heart {
-  background: url("../images/sprite.png") 0px 0px;
+.--heart:before {
+  content: "";
+  background: url("../images/heart.svg");
+  position: absolute;
+  width: 100px;
+  background-size: 100% 100%;
+  height: 100px;
+  left: 11px;
+  top: 13px;
 }
 
-.--veins {
-  background: url("../images/sprite.png") -115px 0px;
+.--veins:before {
+  content: "";
+  background: url("../images/vien.svg");
+  position: absolute;
+  width: 100px;
+  background-size: 100% 100%;
+  height: 100px;
+  left: 8px;
+  top: 13px;
 }
 
-.--brain {
-  background: url("../images/sprite.png") -230px 0px;
+.--brain:before {
+  content: "";
+  background: url("../images/brain.svg");
+  position: absolute;
+  width: 100px;
+  background-size: 100% 100%;
+  height: 100px;
+  left: 8px;
+  top: 13px;
 }
 
-.--lungs {
-  background: url("../images/sprite.png") -345px 0px;
+.--lungs:before {
+  content: "";
+  background: url("../images/leather.svg");
+  position: absolute;
+  width: 100px;
+  background-size: 100% 100%;
+  height: 100px;
+  left: 10px;
+  top: 17px;
 }
 
-.--immunity {
-  background: url("../images/sprite.png") -460px 0px;
+.--immunity:before {
+  content: "";
+  background: url("../images/imunitet.svg");
+  position: absolute;
+  width: 96px;
+  background-size: 100% 100%;
+  height: 100px;
+  left: 10px;
+  top: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+  .taxifolia-main-props-responsive {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  .taxifolia-main-props {
+    background-size: auto 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .taxifolia-main-props-list-item {
+    flex-wrap: wrap;
+  }
+
+  .taxifolia-main-props-list-item-description-path {
+    width: 100%;
+  }
+
+  .taxifolia-main-props-list-item {
+    justify-content: center;
+  }
 }
 .taxifolia-way-of-activities {
   width: 100%;
+  background: #fff;
 }
 
 .taxifolia-way-of-activities-responsive {
@@ -493,6 +746,36 @@ input {
 .--immunity-active {
   background: url("../images/sprite.png") -468px -154px;
 }
+
+@media screen and (max-width: 1024px) {
+  .taxifolia-way-of-activities-responsive {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  .taxifolia-way-of-activities-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .taxifolia-way-of-activities-list-item {
+    width: 70%;
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .taxifolia-way-of-activities-list-item {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .taxifolia-way-of-activities-list-item p {
+    padding: 0;
+  }
+}
 .taxifolia-more-text-description {
   width: 100%;
   background: linear-gradient(to right, #f66920 0%, #f66920 53%, #fca32a 55%, #fca32a 100%);
@@ -523,7 +806,7 @@ input {
   content: "";
   position: absolute;
   background: url("../images/sprite.png") -19px -429px;
-  left: 20px;
+  left: 28px;
 }
 
 .taxifolia-more-text-description-list-item:nth-child(1):after {
@@ -549,7 +832,7 @@ input {
   content: "";
   position: absolute;
   background: url("../images/sprite.png") -90px -429px;
-  left: 20px;
+  left: 28px;
 }
 
 .taxifolia-more-text-description-list-item:nth-child(2):after {
@@ -614,6 +897,60 @@ input {
   line-height: 20px;
   padding-right: 50px;
 }
+
+@media screen and (max-width: 1024px) {
+  .taxifolia-more-text-description-list {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .taxifolia-more-text-description-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .taxifolia-more-text-description {
+    background: none;
+  }
+
+  .taxifolia-more-text-description-list-item {
+    transition: none;
+    flex: none !important;
+    width: 100%;
+    padding: 70px 10px 70px 110px !important;
+  }
+
+  .taxifolia-more-text-description-list-item:after {
+    display: none !important;
+  }
+
+  .taxifolia-more-text-description-list-item p {
+    width: inherit;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .taxifolia-more-text-description-list-item {
+    padding: 100px 30px 70px 30px !important;
+    text-align: center;
+  }
+
+  .taxifolia-more-text-description-list-item:before {
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 20px;
+  }
+
+  .taxifolia-more-text-description-list-item p {
+    padding: 10px 20px;
+  }
+
+  .taxifolia-more-text-description-list-item h4 {
+    width: inherit;
+  }
+}
 .taxifolia-backets {
   width: 100%;
   overflow-x: hidden;
@@ -634,7 +971,7 @@ input {
   position: absolute;
   height: 100%;
   background: url("../images/figure.png");
-  left: calc((1024px - 1260px) / 2);
+  left: calc((100% - 1260px) / 2);
   z-index: 0;
 }
 
@@ -695,6 +1032,13 @@ input {
   color: #fff;
   padding: 140px 0 55px 0;
   text-transform: uppercase;
+}
+
+.taxifolia-description-form-script-replace,
+.taxifolia-description-form-script-replace span {
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
 }
 
 .taxifolia-description-form {
@@ -760,6 +1104,33 @@ input {
   width: 100%;
   margin: 15px 0 50px 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .taxifolia-backets-responsive {
+    width: 100%;
+  }
+
+  .taxifolia-backets-mails-form {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .taxifolia-backets-goods {
+    flex-wrap: wrap;
+  }
+
+  .taxifolia-backets-goods-item {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .taxifolia-backets-goods-item img {
+    width: 250px;
+  }
+}
 .taxifolia-comments-part {
   width: 100%;
 }
@@ -776,9 +1147,29 @@ input {
 }
 
 .taxifolia-comments-part-sliders-outer-hidden {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.taxifolia-comments-part-sliders-outer-hidden:before {
+  content: "";
+  width: 40px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+}
+
+.taxifolia-comments-part-sliders-outer-hidden:after {
+  content: "";
+  width: 40px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  z-index: 9;
+  right: 0;
 }
 
 .taxifolia-slider-comments-list {
@@ -787,7 +1178,7 @@ input {
 
 .taxifolia-slider-comments-list-item {
   float: left;
-  width: 1000px;
+  padding: 0 50px;
 }
 
 .taxifolia-slider-comments-list-item__flex {
@@ -870,6 +1261,8 @@ input {
 .taxifolia-slider-comments-controls {
   position: absolute;
   width: 100%;
+  top: 50%;
+  margin-top: -11px;
 }
 
 .taxifolia-arrow-prev {
@@ -878,9 +1271,9 @@ input {
   height: 22px;
   display: inline-block;
   background: url("../images/sprite.png") -262px -434px;
-  top: -75px;
-  left: -25px;
+  left: 5px;
   cursor: pointer;
+  z-index: 99;
 }
 
 .taxifolia-arrow-next {
@@ -889,22 +1282,109 @@ input {
   height: 22px;
   display: inline-block;
   background: url("../images/sprite.png") -309px -434px;
-  top: -75px;
-  right: -25px;
+  right: 5px;
   cursor: pointer;
+  z-index: 99;
+}
+
+@media screen and (max-width: 1024px) {
+  .taxifolia-comments-part-responsive {
+    width: 100%;
+  }
+
+  .taxifolia-arrow-prev {
+    left: 15px;
+  }
+
+  .taxifolia-arrow-next {
+    right: 15px;
+  }
+
+  .taxifolia-comments-part-sliders-outer-hidden {
+    width: 100%;
+  }
+
+  .taxifolia-slider-comments-text-part p {
+    padding: 20px;
+  }
+
+  .taxifolia-slider-comments-text-part {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .taxifolia-outer-client-and-company>div {
+    float: none;
+    margin: 0 auto 30px;
+  }
+
+  .taxifolia-outer-client-and-company {
+    width: 100%;
+  }
+
+  .taxifolia-comments-part-sliders-outer {
+    margin-top: 30px;
+  }
 }
 .taxifolia-sertificates {
   width: 100%;
   background: #ececec;
   height: 330px;
   margin-bottom: 80px;
+  position: relative;
 }
 
 .taxifolia-sertificates-sliders-outer {
   position: relative;
-  top: -105px;
+  top: 0;
+  width: 750px;
+  margin: 0 auto;
 }
 
 .taxifolia-sertificates-image {
   box-shadow: 0 0 20px 3px rgba(0,0,0,0.3);
+}
+
+#taxifolia-carousel {
+  height: 300px;
+}
+
+#taxifolia-carousel-prev {
+  position: absolute;
+  width: 11px;
+  height: 22px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 99;
+  background: url("../images/sprite.png") -262px -434px;
+  left: -45px;
+  top: 50%;
+  margin-top: -11px;
+}
+
+#taxifolia-carousel-next {
+  position: absolute;
+  width: 11px;
+  height: 22px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 99;
+  background: url("../images/sprite.png") -309px -434px;
+  right: -45px;
+  top: 50%;
+  margin-top: -11px;
+}
+
+#taxifolia-carousel img {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .taxifolia-sertificates {
+    display: none;
+  }
 }

@@ -13,16 +13,33 @@
 	position relative
 
 .taxifolia-comments-part-sliders-outer-hidden
-	width 1000px
+	width 100%
 	margin 0 auto
 	overflow hidden
+	&:before
+		content ""
+		width 40px
+		height 100%
+		background #fff
+		position absolute
+		z-index 9
+		left 0
+	&:after
+		content ""
+		width 40px
+		height 100%
+		background #fff
+		position absolute
+		z-index 9
+		right 0
+
 
 .taxifolia-slider-comments-list
 	display table
 
 .taxifolia-slider-comments-list-item
 	float left
-	width 1000px
+	padding 0 50px
 	
 .taxifolia-slider-comments-list-item__flex
 	display flex
@@ -89,6 +106,8 @@
 .taxifolia-slider-comments-controls
 	position absolute
 	width 100%
+	top 50%
+	margin-top -11px
 
 .taxifolia-arrow-prev
 	position absolute
@@ -96,9 +115,9 @@
 	height 22px
 	display inline-block
 	background url(../images/sprite.png) -262px -434px
-	top -75px
-	left -25px
+	left 5px
 	cursor pointer
+	z-index 99
 	
 
 .taxifolia-arrow-next
@@ -107,6 +126,37 @@
 	height 22px
 	display inline-block
 	background url(../images/sprite.png) -309px -434px
-	top -75px
-	right -25px
+	right 5px
 	cursor pointer
+	z-index 99
+	
+@media screen and (max-width: 1024px)
+	.taxifolia-comments-part-responsive
+		width 100%
+		
+	.taxifolia-arrow-prev
+		left 15px
+	
+	.taxifolia-arrow-next
+		right 15px	
+		
+	.taxifolia-comments-part-sliders-outer-hidden
+		width 100%
+		
+	.taxifolia-slider-comments-text-part p
+		padding 20px
+		
+	.taxifolia-slider-comments-text-part
+		padding 0
+		
+
+@media screen and (max-width: 600px)
+	.taxifolia-outer-client-and-company>div
+		float none
+		margin 0 auto 30px
+		
+	.taxifolia-outer-client-and-company
+		width 100%
+		
+	.taxifolia-comments-part-sliders-outer
+		margin-top 30px

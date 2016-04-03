@@ -14,11 +14,70 @@
 	
 .taxifolia-item-menu
 	display inline-block
-	margin 0 13px
+	margin 0 10px
 	&:first-child
 		margin-left 30px
 
-.taxifolia-item-menu a 
+.taxifolia-item-menu a:not(.taxifolia-button) 
 	color #000
 	text-transform uppercase
 	font-size 14px
+
+@media screen and (max-width: 1024px)
+	.taxifolia-inner-main-header
+		padding 20px
+		width 100%
+
+	.taxifolia-fixed-mobile
+		position relative
+		
+	.taxifolia-item-menu
+		margin 0 !important
+		
+	.taxifolia-item-menu a
+		font-size 12px !important
+		
+@media screen and (max-width: 870px)	
+	.taxifolia-item-menu a
+		font-size 12px !important
+		
+	.taxifolia-item-menu:nth-child(4)
+		display none
+		
+@media screen and (max-width: 790px)
+	.taxifolia-item-menu
+		width 100%
+	
+	.taxifolia-item-menu a
+		font-size 13px !important
+		line-height 16px
+		
+	.taxifolia-list-menu
+		text-align center
+		width 30%
+
+@media screen and (max-width: 600px)	
+	.taxifolia-list-menu
+		text-align center
+		width 50%	
+		
+	.taxifolia-logo img 
+		width 150px
+		
+
+@media screen and (max-width: 490px)
+	.taxifolia-logo img
+		width initial
+		
+	.taxifolia-list-menu
+		display none
+		
+@media screen and (max-width: 490px)
+	.taxifolia-inner-main-header .taxifolia-button
+		display none
+		
+	.taxifolia-inner-main-header
+		justify-content center
+		
+	// .taxifolia-inner-main-header .taxifolia-button
+	// 	width 195px

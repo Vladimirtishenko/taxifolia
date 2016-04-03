@@ -5,7 +5,8 @@ function CommentSlider(element){
 		return false;
 	}
 
-	this.width = element.parentNode.clientWidth;
+	console.log(element.parentNode.clientWidth);
+
 	this.element = element;
 	this.children = this.element.children;
 	this.count = this.children.length;
@@ -28,14 +29,19 @@ CommentSlider.prototype.addEventListeners = function(){
 
 CommentSlider.prototype.addStyleWidth = function(){
 	"use strict";
-	this.element.style.cssText += "width: "+ this.width * (this.count + 1) + "px";
+	this.element.style.cssText += "width: "+ 100 * this.count + "%";
+
+	[].forEach.call(this.children, function(item){
+		item.style.width = 100 / this.count + "%";
+	}.bind(this));
 };
 
 CommentSlider.prototype.handlerToListeners = function(){
 	"use strict";
 	var target = event.target,
 		attr = target.getAttribute('data-arrow'),
-		self = this;
+		self = this,
+		width = self.element.firstElementChild.clientWidth;
 
 	if(!attr){
 		return;
@@ -49,7 +55,7 @@ CommentSlider.prototype.handlerToListeners = function(){
 
 	if(attr == 'prev'){
 		self.element.insertBefore(self.element.lastElementChild, self.element.firstElementChild);
-		self.element.style.cssText += "transform: translateX("+(-self.width)+"px)";
+		self.element.style.cssText += "transform: translateX("+(-width)+"px)";
 		setTimeout(function(){
 			self.element.style.cssText += "transition: .5s; transform: translateX(0px)";
 			self.animation(null);
@@ -57,7 +63,7 @@ CommentSlider.prototype.handlerToListeners = function(){
 		
 
 	} else{
-		self.element.style.cssText += "transition: .5s; transform: translateX("+(-self.width)+"px)";
+		self.element.style.cssText += "transition: .5s; transform: translateX("+(-width)+"px)";
 		self.animation('appendChild', self.element.firstElementChild);
 	}
 

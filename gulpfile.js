@@ -38,6 +38,7 @@ gulp.task('watch', function() {
     gulp.watch("./public/styl/*.styl", ['stylus']);
     gulp.watch("./public/js/*.js", ['js']);
     gulp.watch("./public/js/_components/*.js", ['js']);
+    gulp.watch("./public/js/lib/*.js", ['js']);
 });
 
 gulp.task('default', ['watch']);

@@ -18,7 +18,7 @@
 	position absolute
 	height 100%
 	background url(../images/figure.png)
-	left calc((1024px - 1260px) / 2)
+	left calc((100% - 1260px) / 2)
 	z-index 0
 
 .taxifolia-backets-mails
@@ -70,6 +70,11 @@
 	color #fff
 	padding 140px 0 55px 0
 	text-transform uppercase
+
+.taxifolia-description-form-script-replace, .taxifolia-description-form-script-replace span
+	font-size 16px
+	line-height 19px
+	color #fff
 
 .taxifolia-description-form
 	color #fff
@@ -123,3 +128,23 @@
 .taxifolia-mail-form-flex-item-1
 	width 100%
 	margin 15px 0 50px 0
+	
+@media screen and (max-width: 1024px)
+	.taxifolia-backets-responsive
+		width 100%
+	
+	.taxifolia-backets-mails-form
+		padding 0 30px
+		
+
+@media screen and (max-width: 850px)
+	.taxifolia-backets-goods
+		flex-wrap wrap 
+		
+	.taxifolia-backets-goods-item
+		width 70%
+		margin-bottom 50px
+
+@media screen and (max-width: 500px)	
+	.taxifolia-backets-goods-item img 
+		width 250px

@@ -4,8 +4,6 @@ function TopSlider(element){
 	if(!element){
 		return false;
 	}
-
-	this.width = element.clientHeight;
 	this.element = element.firstElementChild;
 	this.children = this.element.children;
 	this.count = this.children.length;
@@ -51,13 +49,14 @@ TopSlider.prototype.handlerToListeners = function(){
 	"use strict";
 	var target = event.target,
 		attr = (typeof target.getAttribute('data-number') == 'string') ? parseInt(target.getAttribute('data-number')) : null,
-		curentSlide = this.element.parentNode.querySelector('.-active');
+		curentSlide = this.element.parentNode.querySelector('.-active'),
+		height = this.element.parentNode.clientHeight;
 
 	if(attr == null || target.classList.contains('-active')){
 		return;
 	}
 
-	this.element.style.cssText = "transform: translateY("+this.width*(-attr)+"px)";
+	this.element.style.cssText = "transform: translateY("+height*(-attr)+"px)";
 	this.current = attr;
 	curentSlide.classList.remove('-active');
 	target.classList.add('-active');

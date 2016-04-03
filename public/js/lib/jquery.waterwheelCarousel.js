@@ -210,6 +210,7 @@
               // Apply positioning and layering to the images
               .css({
                 'left': centerPosLeft,
+                'right': "inherit",
                 'top': centerPosTop,
                 'visibility': 'visible',
                 'position': 'absolute',
@@ -222,6 +223,7 @@
                 top:             centerPosTop,
                 left:            centerPosLeft,
                 oldPosition:     0,
+                right:          "inherit",
                 currentPosition: 0,
                 depth:           0,
                 opacity:         0

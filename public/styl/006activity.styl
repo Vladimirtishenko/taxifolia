@@ -2,6 +2,7 @@
 
 .taxifolia-way-of-activities
 	width 100%
+	background #fff
 	
 .taxifolia-way-of-activities-responsive
 	width staticWidth
@@ -44,3 +45,26 @@
 
 .--immunity-active
 	background url(../images/sprite.png) -468px -154px
+	
+@media screen and (max-width: 1024px)
+	.taxifolia-way-of-activities-responsive
+		width 100%
+		padding 0 50px
+	
+	.taxifolia-way-of-activities-list
+		flex-wrap wrap 
+		justify-content center
+		
+	.taxifolia-way-of-activities-list-item
+		width 70%
+		margin 20px 0
+		
+@media screen and (max-width: 700px)
+	.taxifolia-way-of-activities-list-item
+		width 100%
+		margin 20px 0
+
+
+@media screen and (max-width: 400px)		
+	.taxifolia-way-of-activities-list-item p
+		padding 0

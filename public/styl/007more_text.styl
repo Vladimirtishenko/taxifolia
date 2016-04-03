@@ -25,7 +25,7 @@
 			content ""
 			position absolute
 			background url(../images/sprite.png) -19px -429px
-			left 20px
+			left 28px
 		&:after
 			height 100%
 			position absolute
@@ -45,7 +45,7 @@
 			content ""
 			position absolute
 			background url(../images/sprite.png) -90px -429px
-			left 20px
+			left 28px
 		&:after
 			height 100%
 			position absolute
@@ -96,3 +96,43 @@
 	color #fff
 	line-height 20px
 	padding-right 50px
+	
+
+@media screen and (max-width: 1024px)
+	.taxifolia-more-text-description-list
+		width 100%
+		
+@media screen and (max-width: 900px)
+	.taxifolia-more-text-description-list
+		flex-wrap wrap
+		justify-content center
+		
+	.taxifolia-more-text-description
+		background none
+		
+	.taxifolia-more-text-description-list-item
+		transition none
+		flex none !important
+		width 100%
+		padding 70px 10px 70px 110px !important
+		&:after
+			display none !important
+		
+	.taxifolia-more-text-description-list-item p
+		width inherit
+		
+@media screen and (max-width: 500px)
+	.taxifolia-more-text-description-list-item
+		padding 100px 30px 70px 30px !important
+		text-align center
+		&:before
+			left 0
+			right 0
+			margin auto
+			top 20px
+			
+	.taxifolia-more-text-description-list-item p
+		padding 10px 20px
+		
+	.taxifolia-more-text-description-list-item h4
+		width inherit
