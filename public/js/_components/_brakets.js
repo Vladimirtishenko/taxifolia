@@ -25,8 +25,9 @@ Brakets.prototype.HandletToSubmit = function(event){
 	event.preventDefault();
 	
 
-	console.log(this.form['taxifolia-radio-meds'])
-
+	var surialize = this.surializer(event.target);
+	
+	this.Xhr("POST", "/brakets.php", surialize, this.calbackToLoadModal);
 
 }
 
@@ -39,4 +40,28 @@ Brakets.prototype.HandletToInput = function(event){
 	if(target.getAttribute('type') == 'radio'){
 		this.text.innerHTML = target.value;
 	}
+}
+
+Brakets.prototype.surializer = function(form){
+
+	var elements = form.elements,
+		str = "?";
+
+	for (var i = 0; i < elements.length; i++) {
+		if(elements[i].type == "radio" && !elements[i].checked){
+			continue;
+		}
+		if(!elements[i].name){
+			continue;
+		}
+		str += elements[i].name+"="+elements[i].value+"&";
+	}
+
+	return str.slice(0,-1);
+
+
+}
+
+Brakets.prototype.calbackToLoadModal = function(data){
+	console.log(data);
 }

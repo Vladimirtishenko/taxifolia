@@ -1,31 +1,33 @@
-function SiteModel() {
-    "use strict";
-    this.xhr = function() {
-        var xmlhttp;
-        try {
-            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-        } catch (e) {
+function SiteModel() {}
+
+SiteModel.prototype.FactoryXHR = function(){
+     "use strict";
+        this.xhr = function() {
+            var xmlhttp;
             try {
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            } catch (E) {
-                xmlhttp = false;
+                xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                try {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (E) {
+                    xmlhttp = false;
+                }
             }
-        }
-        if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
-            xmlhttp = new XMLHttpRequest();
-        }
-        return xmlhttp;
-    };
+            if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+                xmlhttp = new XMLHttpRequest();
+            }
+            return xmlhttp;
+        };
 }
 
-SiteModel.prototype.Xhr = function(method, url, data) {
-    "use strict";
 
-    var xhr = new XMLHttpRequest();
+SiteModel.prototype.Xhr = function(method, url, data, callback) {
+    "use strict";
+    var xhr = this.FactoryXHR();
 
     xhr.onreadystatechange = function(argument) {
         if (xhr.status === 200 && xhr.readyState === 4) {
-            callback(xhr.responseText, objectCaller);
+            callback(xhr.responseText);
         }
     };
 
