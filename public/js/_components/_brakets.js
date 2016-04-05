@@ -24,10 +24,9 @@ Brakets.prototype.addEventListeners = function(){
 Brakets.prototype.HandletToSubmit = function(event){
 	event.preventDefault();
 	
-
 	var surialize = this.surializer(event.target);
 	
-	this.Xhr("POST", "/brakets.php", surialize, this.calbackToLoadModal);
+	this.Xhr("POST", "mail.php", surialize, this.calbackToLoadModal, this);
 
 }
 
@@ -45,7 +44,7 @@ Brakets.prototype.HandletToInput = function(event){
 Brakets.prototype.surializer = function(form){
 
 	var elements = form.elements,
-		str = "?";
+		str = "";
 
 	for (var i = 0; i < elements.length; i++) {
 		if(elements[i].type == "radio" && !elements[i].checked){
@@ -62,6 +61,14 @@ Brakets.prototype.surializer = function(form){
 
 }
 
-Brakets.prototype.calbackToLoadModal = function(data){
-	console.log(data);
+Brakets.prototype.calbackToLoadModal = function(data, self){
+	var data = JSON.parse(data),
+		succsess = "Ваше сообщение отправлено спасибо! Мы с вами свяжемся в течении часа",
+		falses = "Ваше сообщение не отправлено что то пошло не так, попробуйте снова.",
+		dataMessage = data.status == 200 ? succsess : falses,
+		where = self.form.querySelector('.taxifolia-mail-form-flex-input');
+
+	where.insertAdjacentHTML('beforeend', '<p class="taxifolia-notify">'+dataMessage+'</p>')
+	self.form.reset();
+
 }

@@ -22,6 +22,19 @@
 	color #000
 	text-transform uppercase
 	font-size 14px
+	position relative
+	&:before
+		display inline-block
+		width 0%
+		position absolute
+		height 1px 
+		content ""
+		background #000
+		bottom -2px
+		transition .5s
+	&:hover:before
+		width 100%
+		
 
 @media screen and (max-width: 1024px)
 	.taxifolia-inner-main-header

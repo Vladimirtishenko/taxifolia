@@ -513,14 +513,14 @@
      * make sure that they aren't active for certain situations
      */
     $(this).find('a').bind("click", function (event) {
-      var isCenter = $(this).find('img').data('currentPosition') == 0;
+      //var isCenter = $(this).find('img').data('currentPosition') == 0;
       // should we disable the links?
-      if (options.linkHandling === 1 || // turn off all links
-          (options.linkHandling === 2 && !isCenter)) // turn off all links except center
-      {
+      // if (options.linkHandling === 1 || // turn off all links
+      //     (options.linkHandling === 2 && !isCenter)) // turn off all links except center
+      // {
         event.preventDefault();
         return false;
-      }
+      //}
     });
 
     function nextItemFromCenter() {

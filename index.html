@@ -7,6 +7,11 @@
 	<link rel="stylesheet" href="./public/build/build.min.css">
 </head>
 <body>
+	<div class="taxifolia-modal">
+		<div class="taxifolia-cell">
+			
+		</div>
+	</div>
 	<section class="taxifolia-main-outer">
 		<header class="taxifolia-main-header">
 			<div class="taxifolia-inner-main-header">
@@ -15,22 +20,22 @@
 				</a>
 				<ul class="taxifolia-list-menu">
 					<li class="taxifolia-item-menu">
-						<a href="#taxifolia-main-props">Свойства</a>
+						<a class="taxifolia-link-menu" href="#taxifolia-main-props">Свойства</a>
 					</li>
 					<li class="taxifolia-item-menu">
-						<a href="#taxifolia-way-of-activities">Принцип действия</a>
+						<a class="taxifolia-link-menu" href="#taxifolia-way-of-activities">Принцип действия</a>
 					</li>
 					<li class="taxifolia-item-menu">
-						<a href="#taxifolia-more-text-description">Преимущества</a>
+						<a class="taxifolia-link-menu" href="#taxifolia-more-text-description">Преимущества</a>
 					</li>
 					<li class="taxifolia-item-menu">
-						<a href="#taxifolia-sertificates">Сертификаты</a>
+						<a class="taxifolia-link-menu" href="#taxifolia-sertificates">Сертификаты</a>
 					</li>
 					<li class="taxifolia-item-menu">
-						<a href="#taxifolia-comments-part">Отзывы</a>
+						<a class="taxifolia-link-menu" href="#taxifolia-comments-part">Отзывы</a>
 					</li>
 				</ul>
-				<a href="#taxifolia-backets" class="taxifolia-button -green">Заказать</a>
+				<a href="#taxifolia-backets" class="taxifolia-link-menu taxifolia-button -green">Заказать</a>
 			</div>
 		</header>
 		<div class="taxifolia-top-slider">
@@ -267,6 +272,11 @@
 						</div>
 					</div>
 				</div>
+				<div class="taxifolia-disqus">
+					<p class="taxifolia-title-disqus">
+						О нас пишут - <span class="taxifolia-discus-link">читать отзывы</span>
+					</p>
+				</div>
 			</div>	
 		</div>
 		<div class="taxifolia-backets">
@@ -300,28 +310,25 @@
 							Дигидрокверцетин натуральный, концентрация <span>3000</span>мг
 						</span>
 						<div class="taxifolia-binding-input">
-							<input type="number" min="1" max="100" placeholder="Количество упаковок" required /> 
+							<input type="number" min="1" max="100" name="count" placeholder="Количество упаковок" required /> 
 							<span>шт</span>	
 						</div>
 						<div class="taxifolia-mail-form">
 							<h3><span>Детали заказа</span></h3>
 							<div class="taxifolia-mail-form-flex-input">
 								<input class="taxifolia-mail-form-flex-item-3" name="name" type="text" placeholder="Ваше имя" required>
-								<input class="taxifolia-mail-form-flex-item-3" name="email" type="text" placeholder="E-mail">
+								<input class="taxifolia-mail-form-flex-item-3" name="email" type="email" placeholder="E-mail">
 								<input class="taxifolia-mail-form-flex-item-3" name="phone" type="text" placeholder="Телефон" required> 
 								<input class="taxifolia-mail-form-flex-item-1" name="adress" type="text" placeholder="Адрес доставки">
-								<button class="taxifolia-button -white">Заказать</button>
 							</div>
+							<button type="submit" class="taxifolia-button -white">Заказать</button>
 						</div>
 					</div>
 				</div>
 			</form>
 		</div>
 	</section>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="public/build/build.min.js"></script>
-	<script>
-		var carousel = $("#taxifolia-carousel").waterwheelCarousel();
-	</script>
 </body>
 </html>

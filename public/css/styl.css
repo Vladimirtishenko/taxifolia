@@ -204,6 +204,56 @@ input {
 
 /* Defaults */
 
+.taxifolia-modal-closes {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  background: url("../images/close.png");
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.taxifolia-modal-closes:hover {
+  transform: rotate(90deg);
+}
+
+.taxifolia-modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(249,253,215,0.9);
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 999;
+}
+
+.taxifolia-modal-flex {
+  display: flex !important;
+}
+
+.taxifolia-modal-animate-in {
+  animation-name: opacityIn;
+  animation-fill-mode: both;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+}
+
+.taxifolia-modal-animate-out {
+  animation-name: opacityOut;
+  animation-fill-mode: both;
+  animation-duration: 0.8s;
+}
+
+.taxifolia-cell {
+  width: 700px;
+}
+
 .taxifolia-main-outer {
   width: 100%;
   position: relative;
@@ -220,10 +270,15 @@ input {
   display: inline-block;
   text-align: center;
   font-size: 13px;
+  transition: 0.2s;
 }
 
 .-green {
   background: #81ab1c;
+}
+
+.-green:hover {
+  opacity: 0.8;
 }
 
 .-max {
@@ -238,7 +293,7 @@ input {
   color: #000;
   font-family: "PBook";
   font-size: 25px;
-  padding: 17px 0 14px !important;
+  padding: 12px 0 14px !important;
   width: 220px;
   margin: auto;
 }
@@ -268,6 +323,86 @@ input {
     padding: 10px 20px !important;
   }
 }
+
+@-moz-keyframes opacityIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes opacityIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes opacityIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes opacityOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes opacityOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes opacityOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes opacityOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
 .taxifolia-inner-main-header {
   width: 100%;
   background: #fff;
@@ -295,6 +430,22 @@ input {
   color: #000;
   text-transform: uppercase;
   font-size: 14px;
+  position: relative;
+}
+
+.taxifolia-item-menu a:not(.taxifolia-button):before {
+  display: inline-block;
+  width: 0%;
+  position: absolute;
+  height: 1px;
+  content: "";
+  background: #000;
+  bottom: -2px;
+  transition: 0.5s;
+}
+
+.taxifolia-item-menu a:not(.taxifolia-button):hover:before {
+  width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1094,6 +1245,16 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
+}
+
+.taxifolia-notify {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  color: #fff;
 }
 
 .taxifolia-mail-form-flex-item-3 {
@@ -1285,6 +1446,24 @@ input {
   right: 5px;
   cursor: pointer;
   z-index: 99;
+}
+
+.taxifolia-disqus {
+  width: 100%;
+  text-align: center;
+  margin: 0px 0px 30px 0;
+}
+
+.taxifolia-title-disqus {
+  font-family: "PFsemi";
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.taxifolia-title-disqus span {
+  color: #81ab1c;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 1024px) {

@@ -5,8 +5,6 @@ function CommentSlider(element){
 		return false;
 	}
 
-	console.log(element.parentNode.clientWidth);
-
 	this.element = element;
 	this.children = this.element.children;
 	this.count = this.children.length;
