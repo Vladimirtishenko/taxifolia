@@ -761,6 +761,7 @@ input {
 
 .taxifolia-main-props-list-item-description-path p {
   margin: 0;
+  line-height: 20px;
 }
 
 .--heart:before {
@@ -879,9 +880,9 @@ input {
 }
 
 .taxifolia-way-of-activities-list-item p {
-  font-size: 13px;
+  font-size: 15px;
   color: #434240;
-  line-height: 18px;
+  line-height: 20px;
   text-align: left;
   padding: 0 30px;
 }
@@ -946,7 +947,7 @@ input {
 }
 
 .taxifolia-more-text-description-list-item:nth-child(1) {
-  padding: 70px 10px 70px 90px;
+  padding: 70px 0px 70px 90px;
   background: #f66920;
   flex: 1;
 }
@@ -960,19 +961,8 @@ input {
   left: 28px;
 }
 
-.taxifolia-more-text-description-list-item:nth-child(1):after {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  width: 10px;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fd9427 100%);
-  z-index: 100;
-  content: "";
-  top: 0;
-}
-
 .taxifolia-more-text-description-list-item:nth-child(2) {
-  padding: 70px 10px 70px 90px;
+  padding: 70px 0px 70px 90px;
   background: #fd9427;
   flex: 1;
 }
@@ -986,19 +976,8 @@ input {
   left: 28px;
 }
 
-.taxifolia-more-text-description-list-item:nth-child(2):after {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  width: 10px;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fca32a 100%);
-  z-index: 100;
-  content: "";
-  top: 0;
-}
-
 .taxifolia-more-text-description-list-item:nth-child(3) {
-  padding: 70px 10px 70px 110px;
+  padding: 70px 0px 70px 110px;
   background: #fca32a;
   flex: 1;
 }
@@ -1010,17 +989,6 @@ input {
   position: absolute;
   background: url("../images/sprite.png") -154px -422px;
   left: 20px;
-}
-
-.taxifolia-more-text-description-list-item:nth-child(3):after {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  width: 20px;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fca32a 100%);
-  z-index: 100;
-  content: "";
-  top: 0;
 }
 
 .taxifolia-more-text-description-list-item:hover {
