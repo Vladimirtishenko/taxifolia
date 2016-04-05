@@ -21,9 +21,10 @@ Modal.prototype.discusTemplate = function() {
         callback = function() {
             var d = document,
                 s = d.createElement('script');
-            s.src = '//taxi1989.disqus.com/embed.js';
+            s.src = '//taxifolia.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s); };
+            (d.head || d.body).appendChild(s);
+        };
 
     this.responseModal(str, callback);
 }
@@ -33,24 +34,24 @@ Modal.prototype.mailResponse = function() {
 }
 
 
-Modal.prototype.createClose = function(element, wrap, remover){
-	var close = element.querySelector('.taxifolia-modal-closes');
-	if(!close){
-		return;
-	}
-	close.addEventListener('click', this.closeHandler.bind(this, element, wrap, remover))
+Modal.prototype.createClose = function(element, wrap, remover) {
+    var close = element.querySelector('.taxifolia-modal-closes');
+    if (!close) {
+        return;
+    }
+    close.addEventListener('click', this.closeHandler.bind(this, element, wrap, remover))
 }
 
-Modal.prototype.closeHandler = function(element, wrap, remover){
-	element.classList.add('taxifolia-modal-animate-out');
-	setTimeout(function(){
-		element.classList.remove('taxifolia-modal-flex', 'taxifolia-modal-animate-in', 'taxifolia-modal-animate-out');
-		wrap.innerHTML = "";
-		if(remover){
-			var script = document.querySelectorAll('script[src*="'+remover+'"]');	
-			for (var i = 0; i < script.length; i++) {
-				script[i].parentNode.removeChild(script[i]);
-			}
-		}
-	}, 800);
+Modal.prototype.closeHandler = function(element, wrap, remover) {
+    element.classList.add('taxifolia-modal-animate-out');
+    setTimeout(function() {
+        element.classList.remove('taxifolia-modal-flex', 'taxifolia-modal-animate-in', 'taxifolia-modal-animate-out');
+        wrap.innerHTML = "";
+        if (remover) {
+            var script = document.querySelectorAll('script[src*="' + remover + '"]');
+            for (var i = 0; i < script.length; i++) {
+                script[i].parentNode.removeChild(script[i]);
+            }
+        }
+    }, 800);
 }
