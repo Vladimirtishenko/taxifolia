@@ -18,10 +18,16 @@
     "imagemin-pngquant": "^4.1.0"
   },
   "dependencies": {
+    "gulp-imagemin": "^2.4.0",
     "gulp-install": "^0.4.0",
     "gulp-jasmine": "^2.3.0",
     "imagemin-jpegtran": "^4.2.0",
     "imagemin-optipng": "^4.3.0",
-    "map-stream": "0.0.6"
+    "imagemin-pngquant": "^4.2.2",
+    "imagemin-svgo": "^4.2.1",
+    "jpegtran-bin": "^3.0.6",
+    "map-stream": "0.0.6",
+    "optipng-bin": "^3.1.0",
+    "pngquant-bin": "^3.1.0"
   }
 }

@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     stylus = require('gulp-stylus'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
     source = require('./source.js').returnSource;
 
 
@@ -32,6 +34,20 @@ gulp.task('js', function() {
         .pipe(rename('build.min.js'))
         .pipe(gulp.dest('./public/build'))
 });
+
+gulp.task('image', function () {
+    return gulp.src('./public/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            progressive: true,
+            svgoPlugins: [
+                {removeViewBox: false},
+            ],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('./public/images/'));
+});
+
 
 gulp.task('watch', function() {
     gulp.watch("./public/css/*.css", ['css']);

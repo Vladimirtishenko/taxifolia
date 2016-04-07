@@ -4,6 +4,9 @@ CACHE MANIFEST
 CACHE:
 public/images/sprite.png
 public/images/figure.png
+public/images/logo4side.png
+public/images/back.jpg
+public/images/back1.jpg
 public/images/back_mail.png
 public/images/blue_meds.png
 public/images/brain.svg
@@ -35,7 +38,6 @@ public/font/pfbeausanspro-book.ttf
 public/build/build.min.js
 public/build/build.min.css
 index.html
-http://code.jquery.com/jquery-1.9.1.min.js
 
 NETWORK:
 

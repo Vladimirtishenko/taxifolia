@@ -1,5 +1,6 @@
 function returnSource(){
 	var files = [
+        './public/js/lib/jquery-1.9.1.min.js',
         './public/js/model.js', 
         './public/js/controller.js', 
         './public/js/_components/_topSlider.js',

@@ -293,8 +293,9 @@ input {
   color: #000;
   font-family: "PBook";
   font-size: 25px;
-  padding: 12px 0 14px !important;
+  padding: 18px 0 16px !important;
   width: 220px;
+  line-height: 18px;
   margin: auto;
 }
 
@@ -714,7 +715,7 @@ input {
 }
 .taxifolia-main-props {
   width: 100%;
-  background-image: url("../images/sld_2.jpg");
+  background-image: url("../images/back1.jpg");
   background-position: 50% 0%;
   padding-bottom: 50px;
 }
@@ -1232,6 +1233,15 @@ input {
 .taxifolia-mail-form-flex-item-1 {
   width: 100%;
   margin: 15px 0 50px 0;
+}
+
+.taxifolia-4side {
+  width: 100%;
+  height: 40px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1024px) {
