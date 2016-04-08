@@ -1,0 +1,177 @@
+@import '001func.styl'
+
+.taxifolia-comments-part
+	width 100%
+	
+.taxifolia-comments-part-responsive
+	width staticWidth
+	margin 0 auto
+	
+.taxifolia-comments-part-sliders-outer
+	width 100%
+	margin 0 auto 
+	position relative
+
+.taxifolia-comments-part-sliders-outer-hidden
+	width 100%
+	margin 0 auto
+	overflow hidden
+	&:before
+		content ""
+		width 40px
+		height 100%
+		background #fff
+		position absolute
+		z-index 9
+		left 0
+	&:after
+		content ""
+		width 40px
+		height 100%
+		background #fff
+		position absolute
+		z-index 9
+		right 0
+
+
+.taxifolia-slider-comments-list
+	display table
+
+.taxifolia-slider-comments-list-item
+	float left
+	padding 0 50px
+	
+.taxifolia-slider-comments-list-item__flex
+	display flex
+	justify-content flex-start
+	align-items center
+	
+.taxifolia-slider-comments-about-user-part h4
+	font-family "PFsemi"
+	text-transform uppercase
+
+.taxifolia-slider-comments-about-user-part p
+	font-size 12px
+	padding 5px 0 10px 0
+	
+.taxifolia-slider-comments-about-user-part span
+	font-size 11px
+	color grey
+	
+.taxifolia-slider-comments-text-part
+	background #f9f9f9
+	margin 25px 0
+	padding 20px
+
+.taxifolia-slider-comments-text-part p
+	line-height 18px
+	
+.taxifolia-slider-comments-image-part
+	border 1px solid #f9f9f9
+	width 65px
+	margin-right 20px
+
+.taxifolia-slider-comments-image-part img 
+	width 100%
+	
+.taxifolia-outer-client-and-company
+	width 520px
+	height 145px
+	margin 0 auto 50px
+	display table
+	
+.taxifolia-outer-client-and-company > div 
+	height 145px
+	width 260px
+	float left
+	display flex
+	align-items center
+	
+.taxifolia-comments-part-follow-client
+	background url(../images/company.jpg) 0px 0px
+	
+.taxifolia-comments-part-follow-company
+	background url(../images/company.jpg) -260px 0px
+	
+.taxifolia-comments-part-description
+	width 100%
+	padding 0 50px
+	
+.-taxifolia-organization-client, .-taxifolia-private-client
+	display block 
+	color greenColor
+	font-family "PFsemi"
+	font-size 35px
+
+.taxifolia-slider-comments-controls
+	position absolute
+	width 100%
+	top 50%
+	margin-top -11px
+
+.taxifolia-arrow-prev
+	position absolute
+	width 11px
+	height 22px
+	display inline-block
+	background url(../images/sprite.png) -262px -434px
+	left 5px
+	cursor pointer
+	z-index 99
+	
+
+.taxifolia-arrow-next
+	position absolute
+	width 11px
+	height 22px
+	display inline-block
+	background url(../images/sprite.png) -309px -434px
+	right 5px
+	cursor pointer
+	z-index 99
+
+.taxifolia-disqus
+	width 100%
+	text-align center
+	margin 0px 0px 30px 0
+	
+.taxifolia-title-disqus
+	font-family "PFsemi"
+	font-size 16px
+	text-transform uppercase
+	
+.taxifolia-title-disqus span 
+	color greenColor
+	cursor pointer
+	font-size 16px
+
+@media screen and (max-width: 1024px)
+	.taxifolia-comments-part-responsive
+		width 100%
+		
+	.taxifolia-arrow-prev
+		left 15px
+	
+	.taxifolia-arrow-next
+		right 15px	
+		
+	.taxifolia-comments-part-sliders-outer-hidden
+		width 100%
+		
+	.taxifolia-slider-comments-text-part p
+		padding 20px
+		
+	.taxifolia-slider-comments-text-part
+		padding 0
+		
+
+@media screen and (max-width: 600px)
+	.taxifolia-outer-client-and-company>div
+		float none
+		margin 0 auto 30px
+		
+	.taxifolia-outer-client-and-company
+		width 100%
+		
+	.taxifolia-comments-part-sliders-outer
+		margin-top 30px
