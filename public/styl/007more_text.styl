@@ -1,0 +1,111 @@
+@import '001func.styl'
+
+.taxifolia-more-text-description
+	width 100%
+	background linear-gradient(to right, #f66920 0%,#f66920 53%,#fca32a 55%,#fca32a 100%)
+	
+.taxifolia-more-text-description-list
+	margin 30px auto 0
+	width staticWidth
+	position relative
+	display flex
+
+  
+.taxifolia-more-text-description-list-item
+	transition flex 500ms ease-out
+	position relative
+	overflow hidden
+	&:nth-child(1)
+		padding 70px 0px 70px 90px
+		background #f66920
+		flex 1
+		&:before
+			width 60px
+			height 71px
+			content ""
+			position absolute
+			background url(../images/sprite.png) -19px -429px
+			left 28px
+	&:nth-child(2)
+		padding 70px 0px 70px 90px
+		background #fd9427
+		flex 1
+		&:before
+			width 60px
+			height 71px
+			content ""
+			position absolute
+			background url(../images/sprite.png) -90px -429px
+			left 28px
+	&:nth-child(3) 
+		padding 70px 0px 70px 110px
+		background #fca32a
+		flex 1
+		&:before
+			width 90px
+			height 76px
+			content ""
+			position absolute
+			background url(../images/sprite.png) -154px -422px
+			left 20px
+	&:hover
+		flex 3
+
+.taxifolia-more-text-description-outer
+	width 100%
+	position relative
+	overflow hidden
+
+.taxifolia-more-text-description-list-item h4
+	font-size 25px
+	color #fff
+	text-transform uppercase
+	margin 20px 0
+	font-family "PFsemi"
+	width 400px
+
+.taxifolia-more-text-description-list-item p 
+	width 400px
+	color #fff
+	line-height 20px
+	padding-right 50px
+	
+
+@media screen and (max-width: 1024px)
+	.taxifolia-more-text-description-list
+		width 100%
+		
+@media screen and (max-width: 900px)
+	.taxifolia-more-text-description-list
+		flex-wrap wrap
+		justify-content center
+		
+	.taxifolia-more-text-description
+		background none
+		
+	.taxifolia-more-text-description-list-item
+		transition none
+		flex none !important
+		width 100%
+		padding 70px 10px 70px 110px !important
+		&:after
+			display none !important
+		
+	.taxifolia-more-text-description-list-item p
+		width inherit
+		
+@media screen and (max-width: 500px)
+	.taxifolia-more-text-description-list-item
+		padding 100px 30px 70px 30px !important
+		text-align center
+		&:before
+			left 0
+			right 0
+			margin auto
+			top 20px
+			
+	.taxifolia-more-text-description-list-item p
+		padding 10px 20px
+		
+	.taxifolia-more-text-description-list-item h4
+		width inherit
