@@ -8,9 +8,13 @@ function TopSlider(element){
 	this.children = this.element.children;
 	this.count = this.children.length;
 	this.current = 0;
+	this.timer = null;
+	this.controls = null;
 
 	this.constructControls();
 	this.addEventListeners();
+	this.addTimer();
+	this.listenerForControls();
 
 }
 
@@ -32,6 +36,7 @@ TopSlider.prototype.constructControls = function(){
 
 	try {
 		self.element.parentNode.insertAdjacentHTML('beforeend', str);
+		self.controls = document.querySelector('.taxifolia-top-slider-controls');
 		return true;
 	} catch (e){
 		throw Error("No Slides");
@@ -39,16 +44,54 @@ TopSlider.prototype.constructControls = function(){
 
 };
 
+TopSlider.prototype.listenerForControls = function(){
+
+	if(!this.controls){
+		return;
+	}
+
+	this.controls.addEventListener('mouseenter', this.handlerEnterControls.bind(this));
+	this.controls.addEventListener('mouseleave', this.handlerLeaveControls.bind(this));
+
+}
+
+TopSlider.prototype.handlerEnterControls = function(){
+	if(!this.timer){
+		return;
+	}
+	clearTimeout(this.timer);
+}
+
+TopSlider.prototype.handlerLeaveControls = function(){
+	if(!this.timer){
+		return;
+	}
+	this.addTimer();
+}
+
 TopSlider.prototype.addEventListeners = function(){
 	"use strict";
 	var controls = document.querySelector('.taxifolia-top-slider-controls');
 	controls.addEventListener('click', this.handlerToListeners.bind(this));
 };
 
-TopSlider.prototype.handlerToListeners = function(){
+
+TopSlider.prototype.addTimer = function(){
+	this.timer = setTimeout(this.timerHandler.bind(this), 5000);
+}
+
+TopSlider.prototype.timerHandler = function(){
 	"use strict";
-	var target = event.target,
-		attr = (typeof target.getAttribute('data-number') == 'string') ? parseInt(target.getAttribute('data-number')) : null,
+	var next = this.current == 0 ? 1 : 0;
+	this.handlerToListeners(next);
+	clearTimeout(this.timer);
+	this.addTimer();
+}
+
+TopSlider.prototype.handlerToListeners = function(next){
+	"use strict";
+	var target = (event && event.target) ? event.target : (next != null) ? document.querySelector('span[data-number="'+next+'"]') : null,
+		attr = (event && typeof target.getAttribute('data-number') == 'string') ? parseInt(target.getAttribute('data-number')) : (next != null) ? next : null,
 		curentSlide = this.element.parentNode.querySelector('.-active'),
 		height = this.element.parentNode.clientHeight;
 
