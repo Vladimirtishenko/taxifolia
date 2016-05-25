@@ -1,5 +1,7 @@
 <?php
 
+echo "this";
+
 $a = [];
 
 if(empty($_POST)){
