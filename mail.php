@@ -33,7 +33,7 @@ $message = '
 </html>'; 
 
 $headers  = "Content-type: text/html; charset=utf-8 \r\n"; 
-$headers .= "From: vladimirtishenko1@gmail.com\r\n"; 
+$headers .= "From: market@dkg.in.ua\r\n"; 
 
 if(mail($to, $subject, $message, $headers) == true){
 	echo json_encode(array("status" => 200));
