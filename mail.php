@@ -1,3 +1,5 @@
+﻿"test"
+
 <?php
 
 echo "this";
@@ -42,5 +44,3 @@ if(mail($to, $subject, $message, $headers) == true){
 } else {
 	echo json_encode($a = ["status" => 404]);
 }
-
-?>
