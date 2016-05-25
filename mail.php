@@ -2,12 +2,8 @@
 
 <?php
 
-echo "this";
-
-$a = [];
-
 if(empty($_POST)){
-	echo json_decode($a = ["status" => 404]);
+	echo json_decode(array("status" => 404));
 	exit();
 }
 
@@ -40,7 +36,7 @@ $headers  = "Content-type: text/html; charset=utf-8 \r\n";
 $headers .= "From: vladimirtishenko1@gmail.com\r\n"; 
 
 if(mail($to, $subject, $message, $headers) == true){
-	echo json_encode($a = ["status" => 200]);
+	echo json_encode(array("status" => 200));
 } else {
-	echo json_encode($a = ["status" => 404]);
+	echo json_encode(array("status" => 404));
 }
