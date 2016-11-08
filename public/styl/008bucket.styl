@@ -112,7 +112,7 @@
 	font-family "PFsemi"
 	color #fff
 	position relative
-	background greenColor
+	background #8da931
 	padding 0 20px
 	z-index 9
 	text-transform uppercase
@@ -145,12 +145,37 @@
 	display flex
 	align-items center
 	justify-content center
+
+.taxifolia-footer-inner
+	width staticWidth
+	margin 0 auto
+	display flex
+	align-items center
+	justify-content space-between
+	
+.taxifolia-contact
+	font-family Arial
+	color #fff
+
+.taxifolia-contact span 
+	padding-right 10px	
+	
+.taxifolia-contact a 
+	color #fff
+	border-bottom 1px solid rgba(256,256,256, .4)
+	padding-bottom 1px
+	&:hover 
+		border-bottom 1px solid rgba(256,256,256, 0)
 	
 @media screen and (max-width: 1024px)
 	.taxifolia-backets-responsive
 		width 100%
 	
 	.taxifolia-backets-mails-form
+		padding 0 30px
+		
+	.taxifolia-footer-inner
+		width 100%
 		padding 0 30px
 		
 
@@ -161,6 +186,18 @@
 	.taxifolia-backets-goods-item
 		width 70%
 		margin-bottom 50px
+	
+	.taxifolia-4side
+		height 100px
+
+	.taxifolia-footer-inner
+		flex-wrap wrap 
+		justify-content center
+		
+	.taxifolia-contact
+		padding 10px 0 20px
+		width 100%
+		text-align center
 
 @media screen and (max-width: 500px)	
 	.taxifolia-backets-goods-item img 
