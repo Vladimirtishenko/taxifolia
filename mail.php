@@ -15,7 +15,7 @@ $count = @$_POST['count'];
 $radio = @$_POST['radio'];
 
 
-$to = "vladimirtishenko1@gmail.com"; 
+$to = "sale@dgk.in.ua"; 
 $subject = "Новое письмо с сайта Taxifolia"; 
 
 $message = ' 
