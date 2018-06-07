@@ -1,6 +1,9 @@
 {
   "name": "gulp",
   "version": "0.1.0",
+  "scripts": {
+    "build": "gulp watch"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.0",

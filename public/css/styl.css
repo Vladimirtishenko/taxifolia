@@ -1103,11 +1103,14 @@ input {
 .taxifolia-backets-goods {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin-top: 50px;
 }
 
 .taxifolia-backets-goods-item {
   text-align: center;
+  width: 50%;
+  margin-bottom: 50px;
 }
 
 .taxifolia-backets-goods-item h3 {
